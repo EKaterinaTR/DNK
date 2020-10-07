@@ -1,0 +1,1 @@
+psql -h <host> -U <user>  -c "\copy <table_name> FROM '<path to file/file.txt>';"

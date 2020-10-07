@@ -1,0 +1,26 @@
+with inter as
+         ((select * from gen1) intersect all (select * from gen2)),
+     uni as ((select * from gen1) union  all (select * from gen2))
+
+select (select count(*) from inter)::float
+           /
+       (select count(*) from uni )::float;
+
+
+with inter as
+         ((select * from gen1_5) intersect all (select * from gen2_5)),
+     uni as ((select * from gen1_5) union  all (select * from gen2_5))
+
+select (select count(*) from inter)::float
+           /
+       (select count(*) from uni )::float;
+
+
+
+with inter as
+         ((select * from gen1_9) intersect all (select * from gen2_9)),
+     uni as ((select * from gen1_9) union  all (select * from gen2_9))
+
+select (select count(*) from inter)::float
+           /
+       (select count(*) from uni )::float;
